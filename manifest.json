@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "USTe Eval Auto-Filler",
+  "version": "1.0",
+  "description": "Automatically fills out the UST student evaluation form.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://student.ust.edu.ph/*"
+  ]
+}
