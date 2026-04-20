@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      width: 320px;
+      padding: 20px;
+      background-color: #ffffff;
+      color: #333;
+      margin: 0;
+    }
+    h2 {
+      font-size: 18px;
+      margin-top: 0;
+      color: #111827;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #4b5563;
+    }
+    select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      font-size: 14px;
+      outline: none;
+      background-color: #f9fafb;
+      transition: border-color 0.2s;
+    }
+    select:focus {
+      border-color: #3b82f6;
+      background-color: #ffffff;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #f5b041; /* UST-inspired Gold/Yellow */
+      color: #111827;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 5px;
+    }
+    button:hover {
+      background-color: #f39c12;
+    }
+    #status {
+      margin-top: 15px;
+      font-size: 13px;
+      text-align: center;
+      font-weight: 600;
+      display: none;
+      padding: 10px;
+      border-radius: 8px;
+      animation: fadeIn 0.3s;
+    }
+    .success { background-color: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
+    .error { background-color: #fee2e2; color: #b91c1c; border: 1px solid #fecaca; }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h2>Faculty Eval Auto-Filler</h2>
+  
+  <div class="form-group">
+    <label for="mainEval">Faculty Competence & Performance</label>
+    <select id="mainEval">
+      <option value="4">4 - Very Satisfactory</option>
+      <option value="3">3 - Satisfactory</option>
+      <option value="2">2 - Unsatisfactory</option>
+      <option value="1">1 - Very Unsatisfactory</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <label for="tnEval">Training Needs Assessment</label>
+    <select id="tnEval">
+      <option value="4">4 - To a great extent</option>
+      <option value="3">3 - To a moderate extent</option>
+      <option value="2">2 - To a small extent</option>
+      <option value="1">1 - To a very small extent</option>
+    </select>
+  </div>
+  
+  <button id="fillBtn">Autofill Evaluation</button>
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
